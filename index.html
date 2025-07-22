@@ -52,7 +52,7 @@
             background-color: rgba(253, 187, 45, 0.1);
             transform: translateY(-2px);
         }
-        .pricing-tab {
+        .custom-tab {
             cursor: pointer;
             padding: 0.75rem 1.5rem;
             border-radius: 0.5rem;
@@ -60,7 +60,7 @@
             background-color: rgba(30,30,30,0.5);
             border: 1px solid transparent;
         }
-        .pricing-tab.active {
+        .custom-tab.active {
             background-color: rgba(253, 187, 45, 0.1);
             color: #FDBB2D;
             font-weight: 700;
@@ -74,6 +74,28 @@
         .pricing-card:hover {
             transform: translateY(-5px);
             border-color: #FDBB2D;
+        }
+        .schedule-table-container {
+            max-height: 500px;
+            overflow-y: auto;
+            background-color: #111;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.75rem;
+        }
+        /* Custom scrollbar for webkit browsers */
+        .schedule-table-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        .schedule-table-container::-webkit-scrollbar-track {
+            background: #1a1a1a;
+            border-radius: 10px;
+        }
+        .schedule-table-container::-webkit-scrollbar-thumb {
+            background: #4a4a4a;
+            border-radius: 10px;
+        }
+        .schedule-table-container::-webkit-scrollbar-thumb:hover {
+            background: #6a6a6a;
         }
     </style>
 </head>
@@ -123,8 +145,32 @@
         </div>
     </section>
 
+    <!-- Value Summary Section -->
+    <section class="py-20 px-4 bg-black">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Unmatched Value: A Year-Long Gauntlet of Tests</h2>
+                <p class="mt-4 text-gray-400 max-w-3xl mx-auto">This isn't just a test series; it's a comprehensive training program. The fee is an investment in a meticulously crafted, high-volume architecture that makes top-tier preparation accessible.</p>
+            </div>
+            <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+                <div class="card p-6 rounded-xl">
+                    <h3 class="text-2xl font-bold text-amber-400 mb-2">Incredible Volume</h3>
+                    <p class="text-gray-300">Access a staggering number of high-stakes tests. This volume breaks down the cost per test to an unbeatable value, ensuring continuous practice and improvement.</p>
+                </div>
+                <div class="card p-6 rounded-xl">
+                    <h3 class="text-2xl font-bold text-amber-400 mb-2">Strategic Structure</h3>
+                    <p class="text-gray-300">The series is scientifically designed to build momentum: from Concept Tests to Part & Half-Syllabus Tests, culminating in Full-Syllabus and All-India Mock Tests (AIFST).</p>
+                </div>
+                <div class="card p-6 rounded-xl">
+                    <h3 class="text-2xl font-bold text-amber-400 mb-2">Dual JEE Focus</h3>
+                    <p class="text-gray-300">Master both formats with a strategic mix of tests for JEE Main and JEE Advanced. Be prepared for every pattern, every challenge, and every surprise on exam day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Open Test Section -->
-    <section id="open-test" class="py-20 px-4 bg-black">
+    <section id="open-test" class="py-20 px-4">
         <div class="container mx-auto">
             <div class="card rounded-xl p-8 md:p-12 lg:p-16 border-2 border-amber-400 shadow-2xl shadow-amber-500/10 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-white">Experience the INVICTUS Edge. <span class="gradient-text">For Free.</span></h2>
@@ -138,6 +184,126 @@
                 </a>
                 <p class="mt-4 text-sm text-gray-500">Limited slots available. Secure your spot now.</p>
             </div>
+        </div>
+    </section>
+    
+    <!-- Detailed Test Schedule Section -->
+    <section id="schedule" class="py-20 px-4">
+        <div class="container mx-auto">
+             <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">The Road to Victory: <span class="gradient-text">Detailed Test Schedule</span></h2>
+                <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Explore the complete test-by-test breakdown of your journey with INVICTUS.</p>
+            </div>
+            
+            <!-- Schedule Tabs -->
+            <div class="flex justify-center space-x-2 md:space-x-4 mb-10">
+                <button class="custom-tab active" onclick="showScheduleTab('schedule-xii')">Class XII</button>
+                <button class="custom-tab" onclick="showScheduleTab('schedule-xi')">Class XI</button>
+            </div>
+
+            <!-- Schedule Tab Content -->
+            <div id="schedule-content">
+                <!-- Class XII Schedule -->
+                <div id="schedule-xii" class="schedule-tab-content">
+                    <!-- Test Count Summary Table -->
+                    <div class="max-w-md mx-auto mb-12">
+                        <div class="card rounded-xl p-6">
+                            <h3 class="text-xl font-bold text-white text-center mb-4">Class XII Test Distribution (34 Tests)</h3>
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center text-gray-300"><span>Concept Builder Tests (Part & Open)</span><span class="font-bold text-amber-400 text-lg">9 Tests</span></div>
+                                <div class="flex justify-between items-center text-gray-300"><span>Half-Syllabus Tests</span><span class="font-bold text-amber-400 text-lg">3 Tests</span></div>
+                                <div class="flex justify-between items-center text-gray-300"><span>Full-Syllabus Major Tests</span><span class="font-bold text-amber-400 text-lg">12 Tests</span></div>
+                                <div class="flex justify-between items-center text-gray-300"><span>All India Mock Tests (AIFST)</span><span class="font-bold text-amber-400 text-lg">10 Tests</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule-table-container p-4">
+                        <table class="w-full text-left border-collapse">
+                            <thead class="sticky top-0 bg-gray-900 z-10"><tr><th class="p-4 text-amber-400 font-bold uppercase">Test No.</th><th class="p-4 text-amber-400 font-bold uppercase">Date</th><th class="p-4 text-amber-400 font-bold uppercase">Test Type</th><th class="p-4 text-amber-400 font-bold uppercase">Pattern</th><th class="p-4 text-amber-400 font-bold uppercase">Syllabus</th></tr></thead>
+                            <tbody class="text-gray-300">
+                                <tr class="border-b border-gray-800"><td class="p-4">1</td><td class="p-4">20-Jul-25</td><td class="p-4">OPEN TEST 1 (MAIN)</td><td class="p-4">JEE (MAIN)</td><td class="p-4">Electrostatics, Current Electricity; Alkyl & Aryl Halides, Alcohol, etc; Sets, Functions, LCD.</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">2</td><td class="p-4">27-Jul-25</td><td class="p-4">OPEN TEST 2 (ADVANCED)</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Electrostatics, Current Electricity; Alkyl & Aryl Halides, Alcohol, etc; Sets, Functions, LCD.</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">3</td><td class="p-4">3-Aug-25</td><td class="p-4">HALF COURSE TEST-1</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Syllabus of Test 1 & 2</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">4</td><td class="p-4">17-Aug-25</td><td class="p-4">PART TEST-1</td><td class="p-4">JEE (ADVANCED)</td><td class="p-4">Magnetism; Amines, Biomolecules, etc; Indefinite & Definite Integrals.</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">5</td><td class="p-4">31-Aug-25</td><td class="p-4">PART TEST-2</td><td class="p-4">JEE (ADVANCED)</td><td class="p-4">EMI, AC, EM Waves; Qualitative Analysis, Solid State; Area, Differential Equations.</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">6</td><td class="p-4">14-Sep-25</td><td class="p-4">HALF COURSE TEST-2</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Syllabus of Test 4 & 5</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">7</td><td class="p-4">12-Oct-25</td><td class="p-4">PART TEST-3</td><td class="p-4">JEE (ADVANCED)</td><td class="p-4">Geometrical & Wave Optics; Liquid Solutions, p-Block, Electrochemistry.</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">8</td><td class="p-4">26-Oct-25</td><td class="p-4">PART TEST-4</td><td class="p-4">JEE (ADVANCED)</td><td class="p-4">Modern Physics, Error Analysis; Coordination Compounds, Metallurgy; 3D Geometry, Probability.</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">9</td><td class="p-4">9-Nov-25</td><td class="p-4">HALF COURSE TEST-3</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Syllabus of Test 7 & 8</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">10</td><td class="p-4">23-Nov-25</td><td class="p-4">FULL TEST-1 (CLASS XI)</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus of Class XI</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">11</td><td class="p-4">7-Dec-25</td><td class="p-4">FULL TEST-2 (CLASS XII)</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus of Class XII</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">12</td><td class="p-4">21-Dec-25</td><td class="p-4">OPEN TEST-3</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus of JEE (ADVANCED)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">13</td><td class="p-4">25-Dec-25</td><td class="p-4">FULL TEST-1</td><td class="p-4">JEE (MAIN)</td><td class="p-4">Full Syllabus of JEE (MAIN)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">14</td><td class="p-4">28-Dec-25</td><td class="p-4">FULL TEST-2</td><td class="p-4">JEE (MAIN)</td><td class="p-4">Full Syllabus of JEE (MAIN)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">15</td><td class="p-4">31-Dec-25</td><td class="p-4">FULL TEST-3</td><td class="p-4">JEE (MAIN)</td><td class="p-4">Full Syllabus of JEE (MAIN)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">16</td><td class="p-4">4-Jan-26</td><td class="p-4">OPEN TEST-4</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus of JEE (ADVANCED)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">17</td><td class="p-4">9-Jan-26</td><td class="p-4">FULL TEST-4</td><td class="p-4">JEE (MAIN)</td><td class="p-4">Full Syllabus of JEE (MAIN)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">18</td><td class="p-4">14-Jan-26</td><td class="p-4">FULL TEST-5</td><td class="p-4">JEE (MAIN)</td><td class="p-4">Full Syllabus of JEE (MAIN)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">19</td><td class="p-4">19-Jan-26</td><td class="p-4">FULL TEST-6</td><td class="p-4">JEE (MAIN)</td><td class="p-4">Full Syllabus of JEE (MAIN)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">20</td><td class="p-4">8-Feb-26</td><td class="p-4">OPEN TEST 5</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus of JEE (ADVANCED)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">21</td><td class="p-4">17-Mar-26</td><td class="p-4">FULL TEST-7</td><td class="p-4">JEE (MAIN)</td><td class="p-4">Full Syllabus of JEE (MAIN)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">22</td><td class="p-4">24-Mar-26</td><td class="p-4">FULL TEST-8</td><td class="p-4">JEE (MAIN)</td><td class="p-4">Full Syllabus of JEE (MAIN)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">23</td><td class="p-4">31-Mar-26</td><td class="p-4">FULL TEST-9</td><td class="p-4">JEE (MAIN)</td><td class="p-4">Full Syllabus of JEE (MAIN)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">24</td><td class="p-4">7-Apr-26</td><td class="p-4">FULL TEST-10</td><td class="p-4">JEE (MAIN)</td><td class="p-4">Full Syllabus of JEE (MAIN)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">25</td><td class="p-4">12-Apr-26</td><td class="p-4">AIFST-1</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus of JEE (ADVANCED)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">26</td><td class="p-4">15-Apr-26</td><td class="p-4">AIFST-2</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus of JEE (ADVANCED)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">27</td><td class="p-4">19-Apr-26</td><td class="p-4">AIFST-3</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus of JEE (ADVANCED)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">28</td><td class="p-4">22-Apr-26</td><td class="p-4">AIFST-4</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus of JEE (ADVANCED)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">29</td><td class="p-4">26-Apr-26</td><td class="p-4">AIFST-5</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus of JEE (ADVANCED)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">30</td><td class="p-4">29-Apr-26</td><td class="p-4">AIFST-6</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus of JEE (ADVANCED)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">31</td><td class="p-4">3-May-26</td><td class="p-4">AIFST-7</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus of JEE (ADVANCED)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">32</td><td class="p-4">6-May-26</td><td class="p-4">AIFST-8</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus of JEE (ADVANCED)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">33</td><td class="p-4">9-May-26</td><td class="p-4">AIFST-9</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus of JEE (ADVANCED)</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">34</td><td class="p-4">12-May-26</td><td class="p-4">AIFST-10</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus of JEE (ADVANCED)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Class XI Schedule -->
+                <div id="schedule-xi" class="schedule-tab-content hidden">
+                    <!-- Test Count Summary Table -->
+                    <div class="max-w-md mx-auto mb-12">
+                        <div class="card rounded-xl p-6">
+                            <h3 class="text-xl font-bold text-white text-center mb-4">Class XI Test Distribution (22 Tests)</h3>
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center text-gray-300"><span>Concept Builder Tests (Part & Open)</span><span class="font-bold text-amber-400 text-lg">12 Tests</span></div>
+                                <div class="flex justify-between items-center text-gray-300"><span>Half-Syllabus Tests</span><span class="font-bold text-amber-400 text-lg">5 Tests</span></div>
+                                <div class="flex justify-between items-center text-gray-300"><span>Full-Syllabus Tests (AIFST)</span><span class="font-bold text-amber-400 text-lg">5 Tests</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule-table-container p-4">
+                        <table class="w-full text-left border-collapse">
+                            <thead class="sticky top-0 bg-gray-900 z-10"><tr><th class="p-4 text-amber-400 font-bold uppercase">Test No.</th><th class="p-4 text-amber-400 font-bold uppercase">Date</th><th class="p-4 text-amber-400 font-bold uppercase">Test Type</th><th class="p-4 text-amber-400 font-bold uppercase">Pattern</th><th class="p-4 text-amber-400 font-bold uppercase">Syllabus</th></tr></thead>
+                            <tbody class="text-gray-300">
+                                <tr class="border-b border-gray-800"><td class="p-4">1</td><td class="p-4">20-Jul-25</td><td class="p-4">OPEN TEST 1 (MAIN)</td><td class="p-4">JEE (MAIN)</td><td class="p-4">Vector, Kinematics; Basic Concepts of Chemistry; Sets, Functions.</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">2</td><td class="p-4">27-Jul-25</td><td class="p-4">OPEN TEST 2 (ADVANCED)</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Vector, Kinematics, NLM; Stoichiometry, Gaseous State; Basic Maths, Straight Lines.</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">3</td><td class="p-4">3-Aug-25</td><td class="p-4">HALF COURSE TEST-1</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Syllabus of Test 1 & 2</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">4</td><td class="p-4">17-Aug-25</td><td class="p-4">PART TEST-1</td><td class="p-4">JEE (MAIN)</td><td class="p-4">Work, Energy & Power; Atomic Structure; Trigonometry.</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">5</td><td class="p-4">31-Aug-25</td><td class="p-4">PART TEST-2</td><td class="p-4">JEE (MAIN)</td><td class="p-4">Conservation of Momentum; Periodic Properties; Circle.</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">6</td><td class="p-4">14-Sep-25</td><td class="p-4">HALF COURSE TEST-2</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Syllabus of Test 4 & 5</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">7</td><td class="p-4">28-Sep-25</td><td class="p-4">OPEN TEST-3</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus up to Half Course Test-2</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">8</td><td class="p-4">12-Oct-25</td><td class="p-4">PART TEST-3</td><td class="p-4">JEE (MAIN)</td><td class="p-4">Rotational Mechanics; Chemical Bonding; Quadratic Equations.</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">9</td><td class="p-4">26-Oct-25</td><td class="p-4">PART TEST-4</td><td class="p-4">JEE (MAIN)</td><td class="p-4">Gravitation; Chemical Kinetics; Quadratic Equations.</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">10</td><td class="p-4">9-Nov-25</td><td class="p-4">HALF COURSE TEST-3</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Syllabus of Test 8 & 9</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">11</td><td class="p-4">23-Nov-25</td><td class="p-4">PART TEST-5</td><td class="p-4">JEE (MAIN)</td><td class="p-4">SHM & Elasticity; Chemical Equilibrium; Progression & Series.</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">12</td><td class="p-4">7-Dec-25</td><td class="p-4">PART TEST-6</td><td class="p-4">JEE (MAIN)</td><td class="p-4">Fluid Mechanics; Ionic Equilibrium; Parabola, Trig Equations.</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">13</td><td class="p-4">21-Dec-25</td><td class="p-4">HALF COURSE TEST-4</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Syllabus of Test 11 & 12</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">14</td><td class="p-4">28-Dec-25</td><td class="p-4">OPEN TEST-4</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus up to Half Course Test-4</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">15</td><td class="p-4">4-Jan-26</td><td class="p-4">PART TEST-7</td><td class="p-4">JEE (MAIN)</td><td class="p-4">Waves & Sound; Thermochemistry; ITF, Ellipse, Hyperbola.</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">16</td><td class="p-4">18-Jan-26</td><td class="p-4">PART TEST-8</td><td class="p-4">JEE (MAIN)</td><td class="p-4">Heat & Thermodynamics; GOC, Hydrocarbons; P&C, Binomial, Complex Nos.</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">17</td><td class="p-4">1-Feb-26</td><td class="p-4">HALF COURSE TEST-5</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Syllabus of Test 15 & 16</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">18</td><td class="p-4">15-Feb-26</td><td class="p-4">AIFST-1</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus of Class XI</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">19</td><td class="p-4">22-Feb-26</td><td class="p-4">AIFST-2</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus of Class XI</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">20</td><td class="p-4">1-Mar-26</td><td class="p-4">AIFST-3</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus of Class XI</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">21</td><td class="p-4">8-Mar-26</td><td class="p-4">AIFST-4</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus of Class XI</td></tr>
+                                <tr class="border-b border-gray-800"><td class="p-4">22</td><td class="p-4">15-Mar-26</td><td class="p-4">AIFST-5</td><td class="p-4">JEE (ADVANCED) P1 & P2</td><td class="p-4">Full Syllabus of Class XI</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center mt-4 text-sm text-gray-500">*Test dates, patterns, and syllabus are subject to change based on official JEE announcements.</p>
         </div>
     </section>
 
@@ -157,16 +323,16 @@
                 <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Select your class to view the tailored packages designed for your success. Prices shown are exclusive for existing Aakash students.</p>
             </div>
 
-            <!-- Tabs -->
+            <!-- Pricing Tabs -->
             <div class="flex justify-center space-x-2 md:space-x-4 mb-10">
-                <button class="pricing-tab active" onclick="showTab('class-xi')">Class XI</button>
-                <button class="pricing-tab" onclick="showTab('class-xii')">Class XII</button>
+                <button class="custom-tab active" onclick="showPricingTab('pricing-xi')">Class XI</button>
+                <button class="custom-tab" onclick="showPricingTab('pricing-xii')">Class XII</button>
             </div>
 
-            <!-- Tab Content -->
+            <!-- Pricing Tab Content -->
             <div id="pricing-content">
-                <!-- Class XI -->
-                <div id="class-xi" class="pricing-tab-content">
+                <!-- Class XI Pricing -->
+                <div id="pricing-xi" class="pricing-tab-content">
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="pricing-card rounded-xl p-8 flex flex-col">
                             <h3 class="text-2xl font-bold gradient-text mb-2">Test Series Only</h3>
@@ -202,8 +368,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- Class XII -->
-                <div id="class-xii" class="pricing-tab-content hidden">
+                <!-- Class XII Pricing -->
+                <div id="pricing-xii" class="pricing-tab-content hidden">
                      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="pricing-card rounded-xl p-8 flex flex-col">
                             <h3 class="text-2xl font-bold gradient-text mb-2">Test Series Only</h3>
@@ -251,25 +417,33 @@
     </footer>
 
     <script>
-        function showTab(tabId) {
-            // Hide all tab content
-            const contents = document.querySelectorAll('.pricing-tab-content');
-            contents.forEach(content => {
-                content.classList.add('hidden');
-            });
-
-            // Deactivate all tabs
-            const tabs = document.querySelectorAll('.pricing-tab');
-            tabs.forEach(tab => {
-                tab.classList.remove('active');
-            });
-
-            // Show the selected tab content
+        function showPricingTab(tabId) {
+            // Hide all pricing tab content
+            document.querySelectorAll('.pricing-tab-content').forEach(content => content.classList.add('hidden'));
+            // Deactivate all pricing tabs
+            document.querySelectorAll('#pricing .custom-tab').forEach(tab => tab.classList.remove('active'));
+            // Show the selected pricing tab content
             document.getElementById(tabId).classList.remove('hidden');
-
-            // Activate the selected tab
-            document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
+            // Activate the selected pricing tab
+            document.querySelector(`#pricing [onclick="showPricingTab('${tabId}')"]`).classList.add('active');
         }
+
+        function showScheduleTab(tabId) {
+            // Hide all schedule tab content
+            document.querySelectorAll('.schedule-tab-content').forEach(content => content.classList.add('hidden'));
+            // Deactivate all schedule tabs
+            document.querySelectorAll('#schedule .custom-tab').forEach(tab => tab.classList.remove('active'));
+            // Show the selected schedule tab content
+            document.getElementById(tabId).classList.remove('hidden');
+            // Activate the selected schedule tab
+            document.querySelector(`#schedule [onclick="showScheduleTab('${tabId}')"]`).classList.add('active');
+        }
+
+        // Set default active tabs on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            showPricingTab('pricing-xi');
+            showScheduleTab('schedule-xii');
+        });
     </script>
 
 </body>
