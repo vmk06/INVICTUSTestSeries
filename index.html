@@ -101,6 +101,7 @@
 </head>
 <body>
 
+    <!-- Hero Section -->
     <section class="hero-section min-h-screen flex items-center justify-center text-center p-4">
         <div class="max-w-4xl">
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-wider text-white">
@@ -123,6 +124,7 @@
         </div>
     </section>
 
+    <!-- USPs Section -->
     <section class="py-20 px-4">
         <div class="container mx-auto">
             <div class="text-center mb-12">
@@ -130,6 +132,7 @@
                 <p class="mt-4 text-gray-400 max-w-2xl mx-auto">If your test series doesn't challenge you, it's not pushing you enough. We expose weaknesses here, so you gain strength in the real exam.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- USP Cards -->
                 <div class="card p-6 rounded-xl transform hover:scale-105 transition-transform duration-300"><div class="card-content"><h3 class="text-xl font-bold text-white mb-2">Built by Rank-Makers</h3><p class="text-gray-400">Every test is created by mentors who've consistently delivered top 500 AIRs. That’s why our questions feel tougher but teach deeper.</p></div></div>
                 <div class="card p-6 rounded-xl transform hover:scale-105 transition-transform duration-300"><div class="card-content"><h3 class="text-xl font-bold text-white mb-2">100% Original Questions</h3><p class="text-gray-400">Guaranteed unique questions in every single test. Absolutely no repetition and no duplicity for a genuine challenge every time.</p></div></div>
                 <div class="card p-6 rounded-xl transform hover:scale-105 transition-transform duration-300"><div class="card-content"><h3 class="text-xl font-bold text-white mb-2">National Benchmarking</h3><p class="text-gray-400">Compete with thousands of serious aspirants across India and know exactly where you stand with our comprehensive national-level analysis.</p></div></div>
@@ -142,6 +145,7 @@
         </div>
     </section>
 
+    <!-- Value Summary Section -->
     <section class="py-20 px-4 bg-black">
         <div class="container mx-auto">
             <div class="text-center mb-12">
@@ -165,6 +169,7 @@
         </div>
     </section>
 
+    <!-- Open Test Section -->
     <section id="open-test" class="py-20 px-4">
         <div class="container mx-auto">
             <div class="card rounded-xl p-8 md:p-12 lg:p-16 border-2 border-amber-400 shadow-2xl shadow-amber-500/10 text-center">
@@ -182,6 +187,7 @@
         </div>
     </section>
     
+    <!-- Detailed Test Schedule Section -->
     <section id="schedule" class="py-20 px-4">
         <div class="container mx-auto">
              <div class="text-center mb-12">
@@ -189,13 +195,17 @@
                 <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Explore the complete test-by-test breakdown of your journey with INVICTUS.</p>
             </div>
             
+            <!-- Schedule Tabs -->
             <div class="flex justify-center space-x-2 md:space-x-4 mb-10">
                 <button class="custom-tab active" onclick="showScheduleTab('schedule-xii')">Class XII</button>
                 <button class="custom-tab" onclick="showScheduleTab('schedule-xi')">Class XI</button>
             </div>
 
+            <!-- Schedule Tab Content -->
             <div id="schedule-content">
+                <!-- Class XII Schedule -->
                 <div id="schedule-xii" class="schedule-tab-content">
+                    <!-- Test Count Summary Table -->
                     <div class="max-w-md mx-auto mb-12">
                         <div class="card rounded-xl p-6">
                             <h3 class="text-xl font-bold text-white text-center mb-4">Class XII Test Distribution (34 Tests)</h3>
@@ -249,7 +259,9 @@
                         </table>
                     </div>
                 </div>
+                <!-- Class XI Schedule -->
                 <div id="schedule-xi" class="schedule-tab-content hidden">
+                    <!-- Test Count Summary Table -->
                     <div class="max-w-md mx-auto mb-12">
                         <div class="card rounded-xl p-6">
                             <h3 class="text-xl font-bold text-white text-center mb-4">Class XI Test Distribution (22 Tests)</h3>
@@ -295,6 +307,7 @@
         </div>
     </section>
 
+    <!-- Testimonial/Quote Section -->
     <section class="py-20 px-4 bg-black">
         <div class="container mx-auto text-center max-w-4xl">
             <p class="text-2xl md:text-3xl font-semibold text-white italic">"Every single mark can change your college and your branch. We built INVICTUS because on result day, there are no second chances."</p>
@@ -302,19 +315,23 @@
         </div>
     </section>
 
+    <!-- Pricing Section -->
     <section id="pricing" class="py-20 px-4">
         <div class="container mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">Choose Your Path to Success</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-white">For Our Aakashians: <span class="gradient-text">Exclusive Pricing</span></h2>
                 <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Select your class to view the tailored packages designed for your success. Prices shown are exclusive for existing Aakash students.</p>
             </div>
 
+            <!-- Pricing Tabs -->
             <div class="flex justify-center space-x-2 md:space-x-4 mb-10">
                 <button class="custom-tab active" onclick="showPricingTab('pricing-xi')">Class XI</button>
                 <button class="custom-tab" onclick="showPricingTab('pricing-xii')">Class XII</button>
             </div>
 
+            <!-- Pricing Tab Content -->
             <div id="pricing-content">
+                <!-- Class XI Pricing -->
                 <div id="pricing-xi" class="pricing-tab-content">
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="pricing-card rounded-xl p-8 flex flex-col">
@@ -351,6 +368,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Class XII Pricing -->
                 <div id="pricing-xii" class="pricing-tab-content hidden">
                      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="pricing-card rounded-xl p-8 flex flex-col">
@@ -392,85 +410,40 @@
         </div>
     </section>
 
-    <section id="pricing-external" class="pt-10 pb-20 px-4">
+    <!-- Non-Aakashian Pricing Section -->
+    <section id="non-aakashian-pricing" class="py-20 px-4 bg-gray-900">
         <div class="container mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">For External <span class="gradient-text">(Non-Aakashian)</span> Students</h2>
-                <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Choose the package that best fits your preparation needs. The following prices are for students not currently enrolled at Aakash.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-white">For All JEE Aspirants: <span class="gradient-text">Non-Aakashians</span></h2>
+                <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Join the ranks of top performers with our comprehensive test series, open to all students.</p>
             </div>
-
-            <div class="flex justify-center space-x-2 md:space-x-4 mb-10">
-                <button class="custom-tab active" onclick="showPricingTabExternal('pricing-xi-ext')">Class XI</button>
-                <button class="custom-tab" onclick="showPricingTabExternal('pricing-xii-ext')">Class XII</button>
-            </div>
-
-            <div id="pricing-content-external">
-                <div id="pricing-xi-ext" class="pricing-tab-content-ext">
-                    <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                        <div class="pricing-card rounded-xl p-8 flex flex-col">
-                            <h3 class="text-2xl font-bold gradient-text mb-2">Test Series Only</h3>
-                            <p class="text-gray-400 mb-6 flex-grow">The core INVICTUS experience. Get the complete Mains & Advance Invictus Test Series.</p>
-                            <p class="text-sm text-gray-300">One Year Mains and Advance Invictus Test Series</p>
-                            <div class="my-6">
-                                <span class="text-4xl font-bold text-white">₹8,849</span>
-                                <span class="text-lg text-gray-500 line-through">₹11,200</span>
-                            </div>
-                            <a href="#" class="w-full text-center btn-premium text-gray-900 font-bold py-3 px-6 rounded-lg uppercase">Enroll Now</a>
-                        </div>
-                        <div class="pricing-card rounded-xl p-8 flex flex-col border-2 border-amber-400 shadow-2xl shadow-amber-500/20">
-                            <span class="text-center mb-4 font-bold text-amber-400 bg-amber-400/10 rounded-full py-1 px-4 self-center">Best Value</span>
-                            <h3 class="text-2xl font-bold gradient-text mb-2">Comprehensive Package</h3>
-                            <p class="text-gray-400 mb-6 flex-grow">The ultimate arsenal. A comprehensive package including the Test Series and expertly crafted study materials.</p>
-                            <p class="text-sm text-gray-300">One Year Comprehensive ITS for JEE Main and Advanced</p>
-                            <div class="my-6">
-                                <span class="text-4xl font-bold text-white">₹8,849</span>
-                                <span class="text-lg text-gray-500 line-through">₹11,210</span>
-                            </div>
-                             <p class="text-xs text-gray-500 mb-4">Note: CBT add-on not listed separately for Class XI in this category.</p>
-                            <a href="#" class="w-full text-center btn-premium text-gray-900 font-bold py-3 px-6 rounded-lg uppercase">Enroll Now</a>
-                        </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Class XI -->
+                <div class="pricing-card rounded-xl p-8 flex flex-col">
+                    <h3 class="text-2xl font-bold gradient-text mb-2">Class XI Program</h3>
+                    <p class="text-gray-400 mb-6 flex-grow">One Year Comprehensive ITS for JEE Main and Advanced DLP Class XI.</p>
+                    <div class="my-6">
+                        <span class="text-4xl font-bold text-white">₹8,849</span>
+                        <span class="text-lg text-gray-500 line-through">₹11,218</span>
                     </div>
+                    <a href="#" class="w-full text-center btn-premium text-gray-900 font-bold py-3 px-6 rounded-lg uppercase">Enroll Now</a>
                 </div>
-                <div id="pricing-xii-ext" class="pricing-tab-content-ext hidden">
-                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="pricing-card rounded-xl p-8 flex flex-col">
-                            <h3 class="text-2xl font-bold gradient-text mb-2">Test Series Only</h3>
-                            <p class="text-gray-400 mb-6 flex-grow">The core INVICTUS experience for Class XII. Get the complete Mains & Advance Invictus Test Series.</p>
-                             <p class="text-sm text-gray-300">One Year Mains and Advance Invictus Test Series</p>
-                            <div class="my-6">
-                                <span class="text-4xl font-bold text-white">₹10,313</span>
-                                <span class="text-lg text-gray-500 line-through">₹13,300</span>
-                            </div>
-                            <a href="#" class="w-full text-center btn-premium text-gray-900 font-bold py-3 px-6 rounded-lg uppercase">Enroll Now</a>
-                        </div>
-                        <div class="pricing-card rounded-xl p-8 flex flex-col">
-                            <h3 class="text-2xl font-bold gradient-text mb-2">Test Series + CBT</h3>
-                            <p class="text-gray-400 mb-6 flex-grow">Combine the test series with Computer Based Test simulation for complete online practice.</p>
-                             <p class="text-sm text-gray-300">Test Series + CBT Add-on</p>
-                            <div class="my-6">
-                                <span class="text-4xl font-bold text-white">₹12,713</span>
-                                <span class="text-lg text-gray-500 line-through">₹16,300</span>
-                            </div>
-                            <a href="#" class="w-full text-center btn-premium text-gray-900 font-bold py-3 px-6 rounded-lg uppercase">Enroll Now</a>
-                        </div>
-                        <div class="pricing-card rounded-xl p-8 flex flex-col border-2 border-amber-400 shadow-2xl shadow-amber-500/20">
-                            <span class="text-center mb-4 font-bold text-amber-400 bg-amber-400/10 rounded-full py-1 px-4 self-center">Recommended</span>
-                            <h3 class="text-2xl font-bold gradient-text mb-2">Comprehensive Package</h3>
-                            <p class="text-gray-400 mb-6 flex-grow">The ultimate arsenal. A comprehensive package including the Test Series and study materials.</p>
-                             <p class="text-sm text-gray-300">One Year Comprehensive ITS for JEE Main and Advanced</p>
-                            <div class="my-6">
-                                <span class="text-4xl font-bold text-white">₹13,570</span>
-                                <span class="text-lg text-gray-500 line-through">₹17,110</span>
-                            </div>
-                            <a href="#" class="w-full text-center btn-premium text-gray-900 font-bold py-3 px-6 rounded-lg uppercase">Enroll Now</a>
-                        </div>
+                <!-- Class XII -->
+                <div class="pricing-card rounded-xl p-8 flex flex-col">
+                    <h3 class="text-2xl font-bold gradient-text mb-2">Class XII Program</h3>
+                    <p class="text-gray-400 mb-6 flex-grow">One Year Comprehensive ITS for JEE Main and Advanced DLP Class XIIS.</p>
+                    <div class="my-6">
+                        <span class="text-4xl font-bold text-white">₹13,570</span>
+                        <span class="text-lg text-gray-500 line-through">₹17,118</span>
                     </div>
+                     <p class="text-xs text-gray-500 mb-4">CBT can be added separately for ₹2,400.</p>
+                    <a href="#" class="w-full text-center btn-premium text-gray-900 font-bold py-3 px-6 rounded-lg uppercase">Enroll Now</a>
                 </div>
             </div>
-             <p class="text-center mt-8 text-sm text-gray-500">*Fee is tax inclusive. MSP (Maximum Special Price) is shown.</p>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="py-8 text-center text-gray-500">
         <p>&copy; 2025 AAKASH Educational Services Limited. All Rights Reserved.</p>
         <p class="text-sm mt-2">Compete Here. Conquer There.</p>
@@ -498,24 +471,11 @@
             // Activate the selected schedule tab
             document.querySelector(`#schedule [onclick="showScheduleTab('${tabId}')"]`).classList.add('active');
         }
-        
-        // --- NEW FUNCTION FOR EXTERNAL PRICING TABS ---
-        function showPricingTabExternal(tabId) {
-            // Hide all external pricing tab content
-            document.querySelectorAll('.pricing-tab-content-ext').forEach(content => content.classList.add('hidden'));
-            // Deactivate all external pricing tabs
-            document.querySelectorAll('#pricing-external .custom-tab').forEach(tab => tab.classList.remove('active'));
-            // Show the selected external pricing tab content
-            document.getElementById(tabId).classList.remove('hidden');
-            // Activate the selected external pricing tab
-            document.querySelector(`#pricing-external [onclick="showPricingTabExternal('${tabId}')"]`).classList.add('active');
-        }
 
         // Set default active tabs on page load
         document.addEventListener('DOMContentLoaded', function() {
             showPricingTab('pricing-xi');
             showScheduleTab('schedule-xii');
-            showPricingTabExternal('pricing-xi-ext'); // Set default for new section
         });
     </script>
 
